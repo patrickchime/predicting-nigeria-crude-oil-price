@@ -1,9 +1,7 @@
-# How Machine Learning can help farmers select best crops
-
 # Introduction
-An integral part of assessing the soil condition is measuring the essential soil metrics such as nitrogen, phosphorous, potassium levels, and pH value. However, it can be quite an expensive and time-consuming process, which can cause farmers to prioritize which metrics to measure based on their budget constraints in order to maximize the yield of their crops
+Farmers want to know which crop would grow best in their soil. Different crops like corn, wheat, or tomatoes need different things from the soil to thrive. One important factor that affects crop growth is the condition of the soil in the field, which can be assessed by measuring basic elements such as nitrogen, phosphorus, ph and potassium levels. Each crop has an ideal soil condition that ensures optimal growth and maximum yield.
 
- One important factor that affects crop growth is the condition of the soil in the field, which can be assessed by measuring basic elements such as nitrogen and potassium levels. Each crop has an ideal soil condition that ensures optimal growth and maximum yield.
+To help farmers with this important decision, we will build a model called "Crop Predictor." This model could look at the soil in farmer's field and tell him which crop would be the most suitable to plant.
 
 The dataset `soil_measures.csv`, used in this project contains:
 

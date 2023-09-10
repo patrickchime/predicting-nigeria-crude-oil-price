@@ -16,7 +16,7 @@ app_mode = st.sidebar.selectbox('Select Page', ['Home', 'Exploration', 'Predicti
 if app_mode == 'Home':
     st.title('FORECASTING NIGERIAN CRUDE OIL PRICE')
     st.image('oil.jpg')
-    st.write("""The time series model used to model Nigerian daily crude oil price is the ,
+    st.write("""The time series model used to model Nigerian daily crude oil price is the
             Autoregressive Integrated Moving Average (**ARIMA**) model. The data used consists of Nigerian daily
             crude oil price from 2009 t0 2023 and this was gotten from the [Central Bank of Nigeria data portal]
             (https://www.cbn.gov.ng/rates/dailycrude.asp)""")

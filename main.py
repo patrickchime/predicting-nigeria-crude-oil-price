@@ -28,7 +28,7 @@ elif app_mode == "Exploration":
 
     # Build a histogram chart
     st.markdown("Histogram chart")
-    num_bins = st.slider('Pick a bin', min_value=20, max_value=40, step=10)
+    num_bins = st.slider('Pick a bin', min_value=30, max_value=50, step=10)
     fig = px.histogram(price, nbins=num_bins, title="Distribution of Crude oil Price")
     fig.update_xaxes(title_text="Price [USD]")
     fig.update_yaxes(title_text="Frequency")
@@ -89,7 +89,7 @@ else:
 
 
 
-    st.markdown(f'The upper and lower boundary prices for Nigerian crude oil for "{date}" is in the table below: ')
+    st.markdown(f'The predicted upper and lower boundary prices of Nigerian crude oil for "{date}" is shown below: ')
 
     # forecasting
     forecast = arima_model.get_forecast(steps = date_difference)
@@ -108,11 +108,10 @@ else:
         # rename the index
         forecast.index.rename("Date", inplace=True)
 
-        forecast.rename(columns = {"mean_ci_lower":"lower_boundary_price [USD]",
-                                   "mean":"predicted_value [USD]",
+        forecast.rename(columns = {"mean_ci_lower":"lower_boundary_price [USD]"
                                     "mean_ci_upper": "upper_boundary_price [USD]"}, inplace=True)
         
-        prediction = forecast[["lower_boundary_price [USD]","predicted_value [USD]",
+        prediction = forecast[["lower_boundary_price [USD]",
                                "upper_boundary_price [USD]"]].round(2).tail(1)
         return prediction.to_dict(orient="records")
     

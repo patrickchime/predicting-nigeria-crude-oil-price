@@ -108,7 +108,7 @@ else:
         # rename the index
         forecast.index.rename("Date", inplace=True)
 
-        forecast.rename(columns = {"mean_ci_lower":"lower_boundary_price [USD]"
+        forecast.rename(columns = {"mean_ci_lower":"lower_boundary_price [USD]",
                                     "mean_ci_upper": "upper_boundary_price [USD]"}, inplace=True)
         
         prediction = forecast[["lower_boundary_price [USD]",

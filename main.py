@@ -102,7 +102,7 @@ else:
     def prediction_formatted(forecast):
 
          #build dataframe of forecast values
-        forecast_df.index = pd.date_range(start=price.index[-1],
+        forecast.index = pd.date_range(start=price.index[-1],
                                   periods=date_difference+1)[1:] # starts from the next day after last day in the dataset 
 
         # rename the index
